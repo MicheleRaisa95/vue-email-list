@@ -14,4 +14,4 @@
 
 - defenisco un metodo generateEmails che viene chiamato quando si preme sul pulsante e inizia a generare le mail, dopo che la variabile loading è impostata su true  e l'arry resettato
 
-- defenisco un metodo che utilizza Axios, e che ogni volta viene generat una mail l'aggiunga all'arry
+- defenisco un metodo che utilizza Axios, e che ogni volta viene generata una mail l'aggiunga all'array
