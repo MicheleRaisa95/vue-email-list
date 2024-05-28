@@ -21,17 +21,18 @@ createApp({
             for (let i = 0; i<this.totalEmails; i++) {
                 this.fetchEmail();
             }
-        }
-    },
-    fetchEmail() {
-        // uso axios per richiesta api
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(response => {
-            // pusho la email nell'array
-            this.emails.push(response.data.response);
-            // se la lunghezza dell'arrray = alle email totali smetto di generare
-            if (this.emails.length === this.totalEmails) {
-                this.loading = false;
-            }
-        });
+        },
+        fetchEmail() {
+            // uso axios per richiesta api
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then(response => {
+                    // pusho la email nell'array
+                    this.emails.push(response.data.response);
+                    // se la lunghezza dell'arrray = alle email totali smetto di generare
+                    if (this.emails.length === this.totalEmails) {
+                        this.loading = false;
+                    }
+                });
+            }        
     }
-}).mount('#app')
+}).mount('#app');

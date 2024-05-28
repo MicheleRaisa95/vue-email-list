@@ -8,12 +8,16 @@
 <body>
     <!-- elemento che contiene app -->
     <div id="app">
-        
+
         <!-- Bottone che genera email -->
-        <button>clicca qui</button>
+        <button @click="generateEmails" :disabled="loading">{{ loading ? 'Generazione in corso...' : 'Genera Email' }}</button>
 
             <!-- lista che contiene le mail -->
-            <ul></ul>
+            <ul v-if="emails.length === totalEmails">
+                <li v-for="email in emails" :key="email">
+                    {{ email }}
+                </li>
+            </ul>
     </div>
     <!-- includo Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
