@@ -10,8 +10,8 @@
 
 - creo un istanza di vue collegata all'elemento id='app'
 
--  definisco data() affinchè sia generato un array vuoto che contenente le mail generate, il numeto tatle delle mail e la variabile loading per il caricamento
+-  definisco data() affinchè sia generato un array vuoto che contenente le mail generate, il numero totale delle mail e la variabile loading per il caricamento
 
-- defenisco un metodo generateEmails che viene chiamato quando si preme sul pulsante e inizia a generae le mail
+- defenisco un metodo generateEmails che viene chiamato quando si preme sul pulsante e inizia a generare le mail, dopo che la variabile loading è impostata su true  e l'arry resettato
 
 - defenisco un metodo che utilizza Axios, e che ogni volta viene generat una mail l'aggiunga all'arry
